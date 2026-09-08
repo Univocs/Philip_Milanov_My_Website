@@ -1,7 +1,6 @@
-using PersonalWebsite.Api.Application.Mails;
 using PersonalWebsite.Api.Storage.ContactMessages;
 
-namespace PersonalWebsite.Api.Application.Careers.GetContactMessageSummaries;
+namespace PersonalWebsite.Api.Application.Mails.GetContactMessageSummaries;
 
 public class GetContactMessageSummariesQueryHandler(IContactMessagesRepository contactMessagesRepository)
 {

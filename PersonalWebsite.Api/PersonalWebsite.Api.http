@@ -1,6 +1,17 @@
 @PersonalWebsite.Api_HostAddress = http://localhost:5073
 
-GET {{PersonalWebsite.Api_HostAddress}}/weatherforecast/
-Accept: application/json
+// Ctrl+Alt+R to send request
+
+### Get Projects
+GET http://localhost:5073/careers
+
+### Get Projects
+GET http://localhost:5073/projects
+
+### Get Projects
+GET http://localhost:5073/skill-groups
+
+### Get Projects
+GET http://localhost:5073/contact-messages
 
 ###
