@@ -31,16 +31,6 @@ function ContactPage() {
 export default function App() {
   return (
     <>
-      <nav>
-        <Link to="/">Home</Link>{" "}
-        <Link to="/animation">Animation</Link>{" "}
-        <Link to="/rigging">Rigging</Link>{" "}
-        <Link to="/projects">Projects</Link>{" "}
-        <Link to="/resume">Resume</Link>{" "}
-        <Link to="/about">About Me</Link>{" "}
-        <Link to="/contact">Contact</Link>
-      </nav>
-
       <Routes>
         <Route path="/" element={<HomePage />} />
         <Route path="/animation" element={<AnimationPage />} />
