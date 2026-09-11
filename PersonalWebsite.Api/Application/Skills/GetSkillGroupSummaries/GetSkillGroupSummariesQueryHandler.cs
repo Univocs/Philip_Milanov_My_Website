@@ -15,10 +15,10 @@ public class GetSkillGroupSummariesQueryHandler(ISkillGroupsRepository skillGrou
       {
         Id = skill.Id,
         Name = skill.Name,
-        Description = skill.Description
+        Description = skill.Description ?? string.Empty  // ?? reads as == if null, then string.Empty
+                  //  same as skill.Description == null ? string.Empty : skill.Description
       }).ToList()
     }).ToList();
-
     return new GetSkillGroupSummariesResponse { Items = summaries };
   }
 }

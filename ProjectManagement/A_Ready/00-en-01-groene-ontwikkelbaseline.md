@@ -1,7 +1,7 @@
 # EN-01: Herstel een groene ontwikkelbaseline
 
 - **Type:** Technische enabler
-- **Status:** Ready
+- **Status:** Done
 - **Volgorde:** 1 van 13
 - **Grootte:** S
 - **Afhankelijkheden:** Geen

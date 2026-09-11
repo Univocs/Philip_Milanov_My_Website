@@ -1,4 +1,5 @@
-import { Link, Route, Routes } from "react-router-dom";
+import { Route, Routes } from "react-router-dom";
+import LayOut from "./components/Layout";
 
 function HomePage() {
   return <h1>Philip Milanov</h1>;
@@ -30,16 +31,16 @@ function ContactPage() {
 
 export default function App() {
   return (
-    <>
-      <Routes>
-        <Route path="/" element={<HomePage />} />
+    <Routes>
+      <Route path="/" element={<LayOut />}>
+        <Route index element={<HomePage />} />
         <Route path="/animation" element={<AnimationPage />} />
         <Route path="/rigging" element={<RiggingPage />} />
         <Route path="/projects" element={<ProjectsPage />} />
         <Route path="/resume" element={<ResumePage />} />
         <Route path="/about" element={<AboutMePage />} />
         <Route path="/contact" element={<ContactPage />} />
-      </Routes>
-    </>
+      </Route>
+    </Routes >
   );
 }

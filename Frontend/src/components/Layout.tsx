@@ -2,7 +2,7 @@ import { Link, Outlet } from "react-router-dom";
 
 export default function LayOut() {
     return (
-        <div>
+        <>
             <nav>
                 <Link to="/">Home</Link>{" "}
                 <Link to="/animation">Animation</Link>{" "}
@@ -12,8 +12,8 @@ export default function LayOut() {
                 <Link to="/about">About Me</Link>{" "}
                 <Link to="/contact">Contact</Link>
             </nav>
-        
-            <Outlet>
-        </div>
+            {/* Outlet are the child routes of Layout */}
+            <Outlet /> 
+        </>
     );
 }   
