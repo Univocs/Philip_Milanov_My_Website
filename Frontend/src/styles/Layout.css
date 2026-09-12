@@ -1,0 +1,69 @@
+.main-nav {
+    width: 100%;
+    background-color: #0d0d0d; /* volle-breedte achtergrondkleur, pas aan naar smaak */
+}
+
+.nav-inner {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 48px;
+    padding: 16px 24px;
+}
+
+.nav-left,
+.nav-right {
+    display: flex;
+    align-items: center;
+    gap: 24px;
+    height: 56px;
+    background-color: #1a1a1a;
+    border: 1px solid #333;
+    border-radius: 999px;
+    padding: 0 24px;
+}
+.logo {
+    height: 40px;
+}
+
+.career-wrapper {
+    position: relative; /* ankerpunt voor de dropdown */
+}
+
+.career-button {
+    background: none;
+    border: none;
+    color: #ccc;
+    font: inherit;
+    cursor: pointer;
+}
+
+.career-dropdown {
+    position: absolute;
+    top: calc(100% + 12px);
+    left: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 14px;
+    background-color: #1a1a1a;
+    border: 1px solid #333;
+    border-radius: 24px;
+    padding: 20px 26px;
+    z-index: 20;
+}
+
+.career-dropdown a,
+.nav-left a,
+.nav-right a {
+    color: #ccc;
+    text-decoration: none;
+}
+
+.backdrop {
+    position: fixed;
+    inset: 0;
+    background-color: rgba(0, 0, 0, 0.6);
+    z-index: 10;
+}
