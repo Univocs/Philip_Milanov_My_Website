@@ -19,24 +19,26 @@ export default function LayOut() {
         }
         // Key is hit == "Escape", do "handleKeyWhenDown" => setIsCareerOpen(false)
         document.addEventListener("keydown", handleKeyWhenDown);
+        return () => document.removeEventListener("keydown", handleKeyWhenDown);
     }, []);
 
     return (
         <>
             <nav className="main-nav">
                 <div className="nav-inner">
-                    {/* LEFT NAVIGATION BAR */}
-                    <div className="nav-left">
+
+                    {/* LOGO + CAREER PIL */}
+                    <div className="nav-logo">
                         <Link to="/" onClick={() => setIsCareerOpen(false)}>
                             <img src={logo} alt="Philip Milanov Logo" className="logo" />
-                        </Link>{" "}
+                        </Link>
 
                         <div className="career-wrapper">
                             <button
                                 type="button"
                                 className="career-button"
                                 onClick={() => setIsCareerOpen(!isCareerOpen)}>
-                                Career
+                                <span className="career-button-text">Career</span>
                             </button>
 
                             {isCareerOpen && (
@@ -48,7 +50,10 @@ export default function LayOut() {
                                 </div>
                             )}
                         </div>
+                    </div>
 
+                    {/* MIDDEN NAVIGATIE */}
+                    <div className="nav-left">
                         <Link to="/projects" onClick={() => setIsCareerOpen(false)}>Projects</Link>
                         <Link to="/skills" onClick={() => setIsCareerOpen(false)}>Skills</Link>
                         <Link to="/resume" onClick={() => setIsCareerOpen(false)}>Resume</Link>
@@ -67,7 +72,9 @@ export default function LayOut() {
             )}
 
             {/* Outlet are the child routes of Layout */}
-            <Outlet />
+            <main className="page-content">
+                <Outlet />
+            </main>
         </>
     );
 }   

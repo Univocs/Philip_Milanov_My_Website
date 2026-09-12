@@ -1,64 +1,116 @@
 .main-nav {
     width: 100%;
-    background-color: #0d0d0d; /* volle-breedte achtergrondkleur, pas aan naar smaak */
+    background-color: #0d0d0d;
 }
 
 .nav-inner {
-    max-width: 1200px;
+    max-width: 1800px;
     margin: 0 auto;
     display: flex;
-    justify-content: center;
+    justify-content: space-between;
+    /* was: center + gap */
+    align-items: center;    
+    padding: 25px 30px;
+}
+
+.nav-logo {
+    display: flex;
     align-items: center;
-    gap: 48px;
-    padding: 16px 24px;
+    gap: 24px;
+    height: 72px;
+    background-color: #171717;
+    border-radius: 50px;
+    padding: 0 24px;
+    font-size: 23px;
 }
 
 .nav-left,
 .nav-right {
     display: flex;
     align-items: center;
-    gap: 24px;
-    height: 56px;
-    background-color: #1a1a1a;
-    border: 1px solid #333;
-    border-radius: 999px;
-    padding: 0 24px;
-}
-.logo {
-    height: 40px;
-}
-
-.career-wrapper {
-    position: relative; /* ankerpunt voor de dropdown */
-}
-
-.career-button {
-    background: none;
-    border: none;
-    color: #ccc;
-    font: inherit;
-    cursor: pointer;
-}
-
-.career-dropdown {
-    position: absolute;
-    top: calc(100% + 12px);
-    left: 0;
-    display: flex;
-    flex-direction: column;
-    gap: 14px;
-    background-color: #1a1a1a;
-    border: 1px solid #333;
-    border-radius: 24px;
-    padding: 20px 26px;
-    z-index: 20;
+    gap: 80px;
+    height: 72px;
+    background-color: #151515;
+    border-radius: 50px;
+    padding: 0 36px;
+    font-size: 23px;
+    font-weight: 100px;
 }
 
 .career-dropdown a,
 .nav-left a,
 .nav-right a {
-    color: #ccc;
+    color: #848484;
     text-decoration: none;
+    padding: 10px 20px;
+    border-radius: 20px;
+    transition: background-color 0.3s ease, transform 0.3s ease, 0.3s ease-out;
+}
+
+.career-dropdown a:hover,
+.nav-left a:hover,
+.nav-right a:hover {
+    color: #fdfdfd;
+    transition: color 0.3s ease, transform 0.3s ease, 0.3s ease-out;
+    transform: translateY(-6px);
+}
+
+.logo {
+    height: 70px;
+    margin-top: 5px;
+    border-radius: 10px;
+    border: 4px solid #2f2f2f;
+    transition: color 0.3s ease, transform 0.3s ease, border-color 0.3s ease;
+}
+
+.career-wrapper {
+    position: relative;
+    /* ankerpunt voor de dropdown */
+}
+
+.career-button {
+    background: none;
+    border: none;
+    border-radius: 20px;
+    color: #aeaeae;
+    font: inherit;
+    cursor: pointer;
+    padding: 10px 20px;
+    transition: color 0.3s ease, background-color 0.3s ease-in-out;
+}
+
+.career-button:hover {
+    color: #fdfdfd;
+    border-color: #aeaeae;
+    background-color: #1d1d1d;
+    transition: transform 0.3s ease;
+}
+
+.career-button-text {
+    display: inline-block;
+    transition: transform 0.3s ease;
+}
+
+.career-button:hover .career-button-text {
+    transform: translateY(-6px);
+}
+
+.logo:hover {
+    color: #fdfdfd;
+    border-color: #aeaeae;
+}
+
+.career-dropdown {
+    position: absolute;
+    top: calc(100% + 12px);
+    left: -17px;
+    top: 100px;
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+    border-radius: 24px;
+    padding: 20px 26px;
+    z-index: 20;
 }
 
 .backdrop {
@@ -66,4 +118,11 @@
     inset: 0;
     background-color: rgba(0, 0, 0, 0.6);
     z-index: 10;
+}
+
+.page-content {
+    max-width: 1400px;
+    margin: 0 auto;
+    padding: 48px 24px;
+    text-align: center;
 }
